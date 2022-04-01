@@ -1,0 +1,12 @@
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\bin\Debug\net6.0\SustainableForaging.Core.deps.json
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\bin\Debug\net6.0\SustainableForaging.Core.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\bin\Debug\net6.0\SustainableForaging.Core.pdb
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\obj\Debug\net6.0\SustainableForaging.Core.csproj.AssemblyReference.cache
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\obj\Debug\net6.0\SustainableForaging.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\obj\Debug\net6.0\SustainableForaging.Core.AssemblyInfoInputs.cache
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\obj\Debug\net6.0\SustainableForaging.Core.AssemblyInfo.cs
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\obj\Debug\net6.0\SustainableForaging.Core.csproj.CoreCompileInputs.cache
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\obj\Debug\net6.0\SustainableForaging.Core.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\obj\Debug\net6.0\refint\SustainableForaging.Core.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\obj\Debug\net6.0\SustainableForaging.Core.pdb
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.Core\obj\Debug\net6.0\ref\SustainableForaging.Core.dll

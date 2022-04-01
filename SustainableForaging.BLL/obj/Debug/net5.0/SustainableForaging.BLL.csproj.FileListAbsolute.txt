@@ -1,0 +1,15 @@
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\bin\Debug\net5.0\SustainableForaging.BLL.deps.json
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\bin\Debug\net5.0\SustainableForaging.BLL.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\bin\Debug\net5.0\SustainableForaging.BLL.pdb
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\bin\Debug\net5.0\SustainableForaging.Core.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\bin\Debug\net5.0\SustainableForaging.Core.pdb
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\SustainableForaging.BLL.csproj.AssemblyReference.cache
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\SustainableForaging.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\SustainableForaging.BLL.AssemblyInfoInputs.cache
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\SustainableForaging.BLL.AssemblyInfo.cs
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\SustainableForaging.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\SustainableForaging.BLL.csproj.CopyComplete
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\SustainableForaging.BLL.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\refint\SustainableForaging.BLL.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\SustainableForaging.BLL.pdb
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.BLL\obj\Debug\net5.0\ref\SustainableForaging.BLL.dll

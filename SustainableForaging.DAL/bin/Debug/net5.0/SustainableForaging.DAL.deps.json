@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SustainableForaging.DAL/1.0.0": {
+        "dependencies": {
+          "SustainableForaging.Core": "1.0.0"
+        },
+        "runtime": {
+          "SustainableForaging.DAL.dll": {}
+        }
+      },
+      "SustainableForaging.Core/1.0.0": {
+        "runtime": {
+          "SustainableForaging.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SustainableForaging.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SustainableForaging.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

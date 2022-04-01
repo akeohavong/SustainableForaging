@@ -1,0 +1,15 @@
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\bin\Debug\net5.0\SustainableForaging.DAL.deps.json
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\bin\Debug\net5.0\SustainableForaging.DAL.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\bin\Debug\net5.0\SustainableForaging.DAL.pdb
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\bin\Debug\net5.0\SustainableForaging.Core.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\bin\Debug\net5.0\SustainableForaging.Core.pdb
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\SustainableForaging.DAL.csproj.AssemblyReference.cache
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\SustainableForaging.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\SustainableForaging.DAL.AssemblyInfoInputs.cache
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\SustainableForaging.DAL.AssemblyInfo.cs
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\SustainableForaging.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\SustainableForaging.DAL.csproj.CopyComplete
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\SustainableForaging.DAL.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\refint\SustainableForaging.DAL.dll
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\SustainableForaging.DAL.pdb
+C:\Users\Anou Keohavong\source\repos\SustainableForaging\SustainableForaging.DAL\obj\Debug\net5.0\ref\SustainableForaging.DAL.dll
