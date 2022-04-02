@@ -25,5 +25,44 @@ namespace SustainableForaging.BLL
                     .Where(i => i.LastName.StartsWith(prefix))
                     .ToList();
         }
+        public Result<Forager> Add(Forager forager)
+        {
+            var result = new Result<Forager>();
+            if(forager == null)
+            {
+                result.AddMessage("Forager must not be null.");
+                return result;
+            }
+
+            if (string.IsNullOrWhiteSpace(forager.FirstName))
+            {
+                result.AddMessage("First name is required.");
+            }
+
+            if (string.IsNullOrEmpty(forager.LastName))
+            {
+                result.AddMessage("Last name is required");
+            }
+            if (string.IsNullOrEmpty(forager.State))
+            {
+                result.AddMessage("State is required");
+            }
+
+            if (repository.FindAll()
+                .Any(i => i.FirstName.Equals(forager.FirstName)
+                && i.LastName.Equals(forager.LastName)
+                && i.State.Equals(forager.State)))
+            {
+                result.AddMessage($"Forager {forager.FirstName} {forager.LastName}, {forager.State} is a duplicate.");
+            }
+
+            if (!result.Success)
+            {
+                return result;
+            }
+            
+            result.Value = repository.Add(forager);
+            return result;
+        }
     }
 }

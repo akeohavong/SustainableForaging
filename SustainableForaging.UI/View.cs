@@ -121,6 +121,16 @@ namespace SustainableForaging.UI
             return forage;
         }
 
+        public Forager MakeForager()
+        {
+            DisplayHeader(MainMenuOption.AddForager.ToLabel());
+            Forager forager = new Forager();
+            forager.FirstName = io.ReadRequiredString("First Name: ");
+            forager.LastName = io.ReadRequiredString("Last Name: ");
+            forager.State = io.ReadRequiredString("State: ");
+            return forager;
+        }
+
         public Item MakeItem()
         {
             DisplayHeader(MainMenuOption.AddItem.ToLabel());

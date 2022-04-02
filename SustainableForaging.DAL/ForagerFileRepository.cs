@@ -10,6 +10,7 @@ namespace SustainableForaging.DAL
 {
     public class ForagerFileRepository : IForagerRepository
     {
+        private const string HEADER = "id,first_name,last_name,state";
         private readonly string filePath;
 
         public ForagerFileRepository(string filePath)
@@ -17,6 +18,21 @@ namespace SustainableForaging.DAL
             this.filePath = filePath;
         }
 
+
+        public Forager Add(Forager forager)
+        {
+            if(forager == null)
+            {
+                return null;
+            }
+
+            List<Forager> all = FindAll();
+
+            forager.Id = Guid.NewGuid().ToString();
+            all.Add(forager);
+            Write(all);
+            return forager;
+        }
         public List<Forager> FindAll()
         {
             var foragers = new List<Forager>();
@@ -59,6 +75,14 @@ namespace SustainableForaging.DAL
                 .ToList();
         }
 
+        private string Serialize(Forager forager)
+        {
+            return string.Format("{0},{1},{2},{3}",
+                    forager.Id,
+                    forager.FirstName,
+                    forager.LastName,
+                    forager.State);
+        }
         private Forager Deserialize(string[] fields)
         {
             if(fields.Length != 4)
@@ -72,6 +96,29 @@ namespace SustainableForaging.DAL
             result.LastName = fields[2];
             result.State = fields[3];
             return result;
+        }
+
+        private void Write(List<Forager> foragers)
+        {
+            try
+            {
+                using StreamWriter writer = new StreamWriter(filePath);
+                writer.WriteLine(HEADER);
+
+                if (foragers == null)
+                {
+                    return;
+                }
+
+                foreach (var forager in foragers)
+                {
+                    writer.WriteLine(Serialize(forager));
+                }
+            }
+            catch (IOException ex)
+            {
+                throw new RepositoryException("could not write foragers", ex);
+            }
         }
     }
 }
