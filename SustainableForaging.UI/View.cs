@@ -231,5 +231,25 @@ namespace SustainableForaging.UI
                 io.PrintLine($"{item.Id}: {item.Name}, {item.Category}, {item.DollarsPerKilogram:0.00} $/kg");
             }
         }
+
+        public void DisplayForagers(List<Forager> foragers)
+        {
+            if (foragers == null || foragers.Count == 0)
+            {
+                io.PrintLine("No foragers found");
+            }
+
+            int index = 1;
+            foreach (Forager forager in foragers.Take(25))
+            {
+                io.PrintLine($"{index++}: {forager.FirstName} {forager.LastName}");
+            }
+            index--;
+
+            if (foragers.Count > 25)
+            {
+                io.PrintLine("More than 25 foragers found. Showing first 25. Please refine your search.");
+            }
+        }
     }
 }

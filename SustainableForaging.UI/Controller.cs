@@ -49,6 +49,9 @@ namespace SustainableForaging.UI
                     case MainMenuOption.ViewItems:
                         ViewItems();
                         break;
+                    case MainMenuOption.ViewForagers:
+                        ViewForagers();
+                        break;
                     case MainMenuOption.AddForage:
                         AddForage();
                         break;
@@ -89,6 +92,16 @@ namespace SustainableForaging.UI
             List<Item> items = itemService.FindByCategory(category);
             view.DisplayHeader("Items");
             view.DisplayItems(items);
+            view.EnterToContinue();
+        }
+
+        private void ViewForagers()
+        {
+            view.DisplayHeader(MainMenuOption.ViewForagers.ToLabel());
+            string lastNamePrefix = view.GetForagerNamePrefix();
+            List<Forager> foragers = foragerService.FindByLastName(lastNamePrefix);
+            view.DisplayHeader("Foragers");
+            view.DisplayForagers(foragers);
             view.EnterToContinue();
         }
 
