@@ -35,6 +35,29 @@ namespace SustainableForaging.BLL
 
             return result;
         }
+        
+        public Dictionary<string, decimal> GetTotalValueOfEachItem(DateTime date)
+        {
+            Dictionary<string, Forager> foragerMap = foragerRepository.FindAll()
+                    .ToDictionary(i => i.Id);
+            Dictionary<int, Item> itemMap = itemRepository.FindAll()
+                    .ToDictionary(i => i.Id);
+
+            List<Forage> result = forageRepository.FindByDate(date);
+            foreach (var forage in result)
+            {
+                forage.Forager = foragerMap[forage.Forager.Id];
+                forage.Item = itemMap[forage.Item.Id];
+            }
+
+            var itemValues = from forage in result
+                             group forage by forage.Item.Name into g
+                             select new { Item = g.Key, Total = g.Sum(forage => forage.Value) };
+
+            return itemValues.ToDictionary(k => k.Item, v => v.Total);
+        }
+
+        
 
         public Result<Forage> Add(Forage forage)
         {

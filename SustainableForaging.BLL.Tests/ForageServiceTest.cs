@@ -2,6 +2,7 @@
 using SustainableForaging.BLL.Tests.TestDoubles;
 using SustainableForaging.Core.Models;
 using System;
+using System.Collections.Generic;
 
 namespace SustainableForaging.BLL.Tests
 {
@@ -59,6 +60,28 @@ namespace SustainableForaging.BLL.Tests
 
             Result<Forage> result = service.Add(forage);
             Assert.IsFalse(result.Success);
+        }
+
+        [Test]
+        public void GetTotalValue_ReturnNamesAndTotals()
+        {
+
+            Forage forage = new Forage();
+            forage.Date = DateTime.Today;
+            forage.Forager = ForagerRepositoryDouble.FORAGER;
+            forage.Item = ItemRepositoryDouble.ITEM;
+            forage.Kilograms = 0.5M;
+
+            Dictionary<string, decimal> expected = new Dictionary<string, decimal>
+             {
+                {"Beverages", 18.50M},
+                {"Condiments", 16.00M},
+                {"Produce", 25.00M}
+             };
+
+            Dictionary<string, decimal> actual = service.GetTotalValueOfEachItem(DateTime.Today);
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }

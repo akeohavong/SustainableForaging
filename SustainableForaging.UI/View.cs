@@ -219,6 +219,24 @@ namespace SustainableForaging.UI
             }
         }
 
+        public void DisplayTotalItemValues(Dictionary<string, decimal> forageItems)
+        {
+            if(forageItems == null || forageItems.Count == 0)
+            {
+                io.PrintLine("No forages found.");
+                return;
+            }
+
+            foreach(KeyValuePair<string, decimal> item in forageItems)
+            {
+                io.PrintLine(
+                    string.Format("{0} - Total Value: ${1:0.00}",
+                    item.Key,
+                    item.Value)
+                    );
+            }
+        }
+
         public void DisplayItems(List<Item> items)
         {
             if(items == null || items.Count == 0)
