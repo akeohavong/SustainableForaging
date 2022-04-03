@@ -65,8 +65,7 @@ namespace SustainableForaging.UI
                         ReportKgPerItem();
                         break;
                     case MainMenuOption.ReportCategoryValue:
-                        view.DisplayStatus(false, "NOT IMPLEMENTED");
-                        view.EnterToContinue();
+                        ReportTotalValueOfCategory();   
                         break;
                     case MainMenuOption.Generate:
                         Generate();
@@ -162,8 +161,19 @@ namespace SustainableForaging.UI
         private void ReportKgPerItem()
         {
             DateTime date = view.GetForageDate();
-            Dictionary<string, decimal> totalItemValues = forageService.GetTotalValueOfEachItem(date); 
-            view.DisplayTotalItemValues(totalItemValues);
+            Dictionary<string, decimal> totalItemKg = forageService.GetTotalKgOfEachItem(date);
+            view.DisplayHeader($"Report: Total kg of each item foraged on {date.ToString("MM/dd/yyyy")}");
+            view.DisplayTotalItemKg(totalItemKg);
+            view.EnterToContinue();
+
+        }
+
+        private void ReportTotalValueOfCategory()
+        {
+            DateTime date = view.GetForageDate();
+            Dictionary<Category, decimal> totalItemValues = forageService.GetTotalValueOfCategory(date);
+            view.DisplayHeader($"Report: Total value of each category foraged on {date.ToString("MM/dd/yyyy")}");
+            view.DisplayTotalValueOfCategory(totalItemValues);
             view.EnterToContinue();
         }
 

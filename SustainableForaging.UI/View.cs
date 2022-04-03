@@ -219,7 +219,7 @@ namespace SustainableForaging.UI
             }
         }
 
-        public void DisplayTotalItemValues(Dictionary<string, decimal> forageItems)
+        public void DisplayTotalItemKg(Dictionary<string, decimal> forageItems)
         {
             if(forageItems == null || forageItems.Count == 0)
             {
@@ -229,8 +229,28 @@ namespace SustainableForaging.UI
 
             foreach(KeyValuePair<string, decimal> item in forageItems)
             {
+
                 io.PrintLine(
-                    string.Format("{0} - Total Value: ${1:0.00}",
+                    string.Format("{0, -30} {1,10:0.0} kg",
+                    item.Key,
+                    item.Value)
+                    );
+            }
+        }
+
+        public void DisplayTotalValueOfCategory(Dictionary<Category, decimal> forageItems)
+        {
+            if(forageItems == null || forageItems.Count == 0)
+            {
+                io.PrintLine("No forages found.");
+                return;
+            }
+
+            foreach (KeyValuePair<Category, decimal> item in forageItems)
+            {
+
+                io.PrintLine(
+                    string.Format("{0, -30} ${1,-10:0.00}",
                     item.Key,
                     item.Value)
                     );
