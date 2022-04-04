@@ -63,25 +63,46 @@ namespace SustainableForaging.BLL.Tests
         }
 
         [Test]
-        public void GetTotalValue_ReturnNamesAndTotals()
+        public void GetForageItemNamesAndTotalKg_ReturnDictionary()
         {
+            Forage forage = new Forage();
+            forage.Date = DateTime.Today;
+            forage.Forager = ForagerRepositoryDouble.FORAGER;
+            forage.Item = ItemRepositoryDouble.ITEM;
+            forage.Kilograms = 0.5M;
+            
+            Result<Forage> result = service.Add(forage);
 
+            Dictionary<string, decimal> expected = new Dictionary<string, decimal>
+             {
+                {"Chanterelle", 0.5M},
+             };
+
+            Dictionary<string, decimal> actual = service.GetTotalKgOfEachItem(DateTime.Today);
+
+            Assert.AreEqual(expected.Keys, actual.Keys);
+            Assert.AreEqual(expected.Values, actual.Values);
+        }
+        [Test]
+        public void GetForageItemCategoriesAndValues_ReturnTotalValues()
+        {
             Forage forage = new Forage();
             forage.Date = DateTime.Today;
             forage.Forager = ForagerRepositoryDouble.FORAGER;
             forage.Item = ItemRepositoryDouble.ITEM;
             forage.Kilograms = 0.5M;
 
-            Dictionary<string, decimal> expected = new Dictionary<string, decimal>
-             {
-                {"Beverages", 18.50M},
-                {"Condiments", 16.00M},
-                {"Produce", 25.00M}
-             };
+            Result<Forage> result = service.Add(forage);
 
-            Dictionary<string, decimal> actual = service.GetTotalValueOfEachItem(DateTime.Today);
+            Dictionary<Category, decimal> expected = new Dictionary<Category, decimal>
+            {
+                {Category.Edible, 4.995M},
+            };
 
-            Assert.AreEqual(expected, actual);
+            Dictionary<Category, decimal> actual = service.GetTotalValueOfCategory(DateTime.Today);
+
+            Assert.AreEqual(expected.Keys, actual.Keys);
+            Assert.AreEqual(expected.Values, actual.Values);
         }
     }
 }

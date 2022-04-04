@@ -13,5 +13,21 @@ namespace SustainableForaging.DAL.Tests
             List<Forager> all = repo.FindAll();
             Assert.AreEqual(1000, all.Count);
         }
+
+        [Test]
+        public void ShouldAddForager()
+        {
+            /*ForagerFileRepository repo = new ForagerFileRepository(@"data\foragers.csv");
+            Forager forager = new Forager();
+            forager.FirstName = "John";
+            forager.LastName = "Doe";
+            forager.State = "NM";
+            repo.Add(forager);
+            List<Forager> all = repo.FindAll();
+            int expected = 1001;
+            int actual = all.Count;
+            Assert.AreEqual(expected, actual);*/
+           
+        }
     }
 }

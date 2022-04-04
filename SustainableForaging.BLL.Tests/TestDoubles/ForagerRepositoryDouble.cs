@@ -42,5 +42,14 @@ namespace SustainableForaging.BLL.Tests.TestDoubles
             forager.State = "GA";
             return forager;
         }
+
+        public Forager Add(Forager forager)
+        {
+            forager.Id = "0e4707f4-407e-4ec9-9665-baca0aabe88c";
+            forager.FirstName = "Jilly";
+            forager.LastName = "Sisse";
+            forager.State = "GA";
+            return forager;
+        }
     }
 }
